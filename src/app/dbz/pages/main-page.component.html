@@ -1,0 +1,22 @@
+<h1>DBZ Personajes</h1>
+<hr>
+
+<div class="row">
+  <div class="col">
+    <!-- Tercer paso Final -->
+<dbz-list [characterList]="characters"
+         (characterDeleted)="onDeleteCharacter($event)"></dbz-list>
+<!-- En este caso, onCharacterDeleted es un método del componente padre que se ejecutará cuando se emita el evento characterDeleted. -->
+  </div>
+
+  <div class="col">
+
+    <dbz-forms (onNewCharacter)="onNewCharacter($event)" ></dbz-forms>
+
+  </div>
+</div>
+
+<!-- CUANDO QUEREMOS MANDAR DEL PADRE AL HIJO O QUEREMOS ASIGNAR A UN ATRIBUTO SE UTILIZAN <[]> -->
+<!-- CUANDO QUEREMOS ESCUCHAR UN EVENTO SE UTILIZAN <()> -->
+<!-- EN EL CASO DEL CODIGO QUEREMOS ESCUCHAFR EL EVENTO CUANDO DB EMITA UN NUEVO CHARACTER -->
+
